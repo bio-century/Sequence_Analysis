@@ -3,36 +3,40 @@ def ColorDNA(mySequence, myColors, myDefaultColor):
 	import numpy as np
 	if type(mySequence) is np.ndarray:
 		mySequence = ''.join(str(i) for i in mySequence)
+		mySequence = mySequence.upper()
 	s  = ""
 	for ii in range(0,len(mySequence)):
 		if mySequence[ii] == "A":
-			s = s + f"{myColors[0]}"+mySequence[ii]+f"{myDefaultColor}"
+			s = s + f"{myColors[0]}" + mySequence[ii] + f"{myDefaultColor}"
 		elif mySequence[ii] == "C":
-			s = s + f"{myColors[1]}"+mySequence[ii]+f"{myDefaultColor}"
+			s = s + f"{myColors[1]}" + mySequence[ii] + f"{myDefaultColor}"
 		elif mySequence[ii] == "G":
-			s = s + f"{myColors[2]}"+mySequence[ii]+f"{myDefaultColor}"
+			s = s + f"{myColors[2]}" + mySequence[ii] + f"{myDefaultColor}"
 		elif mySequence[ii] == "T":
-			s = s + f"{myColors[3]}"+mySequence[ii]+f"{myDefaultColor}"
+			s = s + f"{myColors[3]}" + mySequence[ii] + f"{myDefaultColor}"
 	return s
 
 
 # Color a sequence with respect to the SOI Positions
 def ColorTheSeq(mySequence, mySOIPositions, myColor, myDefaultColor):
+
 	import numpy as np
 	s=""
 	if type(mySequence) is np.ndarray:
 		mySequence=''.join(str(i) for i in mySequence)
+		mySequence = mySequence.upper()
 	for ii in range(0,len(mySequence)):
 		if mySOIPositions[ii] > 0:
-			s = s + f"{myColor}"+mySequence[ii]+f"{myDefaultColor}"
+			s = s + f"{myColor}"+mySequence[ii] + f"{myDefaultColor}"
 		else:
-			s=s+f"{myDefaultColor}"+mySequence[ii]+f"{myDefaultColor}"
+			s = s + f"{myDefaultColor}" + mySequence[ii] + f"{myDefaultColor}"
 	return s
 
 
 # Color a sequence array with respect to multiple SOIs stored in an array. The return is the position counts as well as colored "mySequence" and "mySOIPositions" as strings
 def ColorTheSeqMerge(mySequence, mySOIPositions, myColors, myDefaultColor, myColorWarning):
 	import numpy as np
+	mySequence = mySequence.upper()
 	if type(mySequence) is np.ndarray:
 		mySequence = ''.join(str(i) for i in mySequence)
 	s  = ""
@@ -48,17 +52,53 @@ def ColorTheSeqMerge(mySequence, mySOIPositions, myColors, myDefaultColor, myCol
 				s2 = s2 + f"{myDefaultColor}" + mySOIPositionsTotalColored[ii] + f"{myDefaultColor}"
 				break
 			elif mySOIPositionsTotal[ii] == 1 and mySOIPositions[jj][ii] == 1:
-				s  = s + f"{myColors[jj]}"+mySequence[ii]+f"{myDefaultColor}"
-				s2 = s2 + f"{myColors[jj]}"+mySOIPositionsTotalColored[ii]+f"{myDefaultColor}"
+				s  = s + f"{myColors[jj]}" + mySequence[ii]+f"{myDefaultColor}"
+				s2 = s2 + f"{myColors[jj]}" + mySOIPositionsTotalColored[ii]+f"{myDefaultColor}"
 			elif mySOIPositionsTotal[ii] > 1:
-				s  = s + f"{myColorWarning}"+mySequence[ii]+f"{myDefaultColor}"	
-				s2 = s2 + f"{myColorWarning}"+mySOIPositionsTotalColored[ii]+f"{myDefaultColor}"
+				s  = s + f"{myColorWarning}" + mySequence[ii]+f"{myDefaultColor}"	
+				s2 = s2 + f"{myColorWarning}" + mySOIPositionsTotalColored[ii]+f"{myDefaultColor}"
 				break
 	return s, s2, mySOIPositionsTotal
 
 
+def ColorTheSeqMergeGUI(myText, mySequence, mySOIPositions, myColorsTextBox, myDefaultColorTextBox, myColorWarningTextBox, myBackgroundColor, root, myColumnCount):
+	from tkinter import Text, INSERT, END, DISABLED
+	import tkinter as tk
+	import numpy as np
+	mySequence = mySequence.upper()
+	if type(mySequence) is np.ndarray:
+		mySequence = ''.join(str(i) for i in mySequence)
+	mySOIPositionsTotal = [0] * len(mySequence)
+	for jj in range(0, len(mySOIPositions)):
+		mySOIPositionsTotal = mySOIPositionsTotal + mySOIPositions[jj]
+	# print("func: " + mySequence)
+	# myText.config(state=ENABLED)
+	# myText.delete(0, END)
+	myText.insert(INSERT, mySequence)
+	myText.config(state = DISABLED)
+	mySOIPositionsTotalColored = ''.join(str(i) for i in mySOIPositionsTotal)
+	for ii in range(0, len(mySequence)):
+		if ii < len(mySequence):
+			for jj in range(0, len(mySOIPositions)):
+				if mySOIPositionsTotal[ii] == 0:
+					myText.tag_add(str(ii), "1." + str(ii), "1." + str(ii + 1))
+					myText.tag_config(str(ii), foreground = myDefaultColorTextBox)
+					break
+
+				elif mySOIPositionsTotal[ii] == 1 and mySOIPositions[jj][ii] == 1:
+					myText.tag_add(str(ii), "1." + str(ii), "1." + str(ii + 1))
+					myText.tag_config(str(ii), foreground = myColorsTextBox[jj])
+					
+				elif mySOIPositionsTotal[ii] > 1:
+					myText.tag_add(str(ii), "1."+str(ii), "1." + str(ii + 1))
+					myText.tag_config(str(ii), foreground = myColorWarningTextBox)
+					break
+	return myText
+
+
 # Compute complement, reverse and reverse complement of a DNA
 def ComplRev(mySequence, returnSeq):
+    mySequence = mySequence.upper()
     probingBoolean                  = 0
     mySequenceComplement            = [""] * len(mySequence)
     mySequenceReverse               = [""] * len(mySequence)
@@ -106,6 +146,17 @@ def ComplRev(mySequence, returnSeq):
         return mySequenceReverseReturn
     elif returnSeq == "SequenceReverseComplement":
         return mySequenceReverseComplementReturn
+
+
+def DarkTitleBar(window):
+    import ctypes as ct
+    window.update()
+    set_window_attribute = ct.windll.dwmapi.DwmSetWindowAttribute
+    get_parent = ct.windll.user32.GetParent
+    hwnd = get_parent(window.winfo_id())
+    value = 2
+    value = ct.c_int(value)
+    set_window_attribute(hwnd, 20, ct.byref(value),4)
 
 
 # convert a list to a string
