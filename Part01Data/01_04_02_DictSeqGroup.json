@@ -1,0 +1,43 @@
+{
+    "SOIs": {
+        "mySOI01": {
+            "Seq": "AGG",
+            "myColor": "Green",
+            "myIndices": {
+                "mySequence01": [
+                    27,
+                    41
+                ],
+                "mySequence02": []
+            }
+        },
+        "mySOI02": {
+            "Seq": "GAC",
+            "myColor": "Blue",
+            "myIndices": {
+                "mySequence01": [
+                    4
+                ],
+                "mySequence02": [
+                    18,
+                    37
+                ]
+            }
+        },
+        "mySOI03": {
+            "Seq": "CTAG",
+            "myColor": "Yellow",
+            "myIndices": {
+                "mySequence01": [
+                    8,
+                    25
+                ],
+                "mySequence02": []
+            }
+        }
+    },
+    "targetSeq": {
+        "mySequence01": "CTGGGACTCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG",
+        "mySequence02": "ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC"
+    }
+}

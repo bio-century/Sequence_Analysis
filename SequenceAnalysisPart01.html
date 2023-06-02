@@ -14731,7 +14731,7 @@ Whenever a function or method is developed to fulfill the goals, it is outsource
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
@@ -14821,7 +14821,7 @@ To determine all modalities of a DNA-single-strand sequence, i.e.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
@@ -14927,7 +14927,7 @@ Reverse Complement: 	 <span class="ansi-blue-fg">G</span><span class="ansi-green
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
@@ -14941,15 +14941,20 @@ Reverse Complement: 	 <span class="ansi-blue-fg">G</span><span class="ansi-green
 <span class="n">mySequence</span>           <span class="o">=</span> <span class="n">mySequenceInput</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 <span class="n">mySOI</span>                <span class="o">=</span> <span class="s2">&quot;GG&quot;</span>
 
-<span class="n">myCount</span><span class="p">,</span> <span class="n">mySOIPositions</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">mySOI</span><span class="p">)</span>
+<span class="n">myCount</span><span class="p">,</span> <span class="n">mySOIPositions</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">mySOI</span><span class="p">,</span> <span class="s2">&quot;countchain&quot;</span><span class="p">)</span>
 <span class="n">myColor</span>                 <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Green</span>
 <span class="n">myDefaultColor</span>          <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Default</span>
 
 <span class="n">mySequenceColored</span>       <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeq</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">mySOIPositions</span><span class="p">,</span> <span class="n">myColor</span><span class="p">,</span> <span class="n">myDefaultColor</span><span class="p">)</span>
 <span class="n">mySOIPositionsColored</span>   <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeq</span><span class="p">(</span><span class="n">mySOIPositions</span><span class="p">,</span> <span class="n">mySOIPositions</span><span class="p">,</span> <span class="n">myColor</span><span class="p">,</span> <span class="n">myDefaultColor</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySequence : </span><span class="se">\t</span><span class="s2"> </span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">mySequenceColored</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOIPositions: </span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">mySOIPositionsColored</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySequence: </span><span class="se">\t</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> &quot;</span> <span class="o">+</span> <span class="n">mySequenceColored</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOIPositions: </span><span class="se">\t</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> &quot;</span> <span class="o">+</span> <span class="n">mySOIPositionsColored</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">labelNum</span><span class="p">,</span> <span class="n">labelX</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SeqNumberGen</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t\t</span><span class="s2"> &quot;</span> <span class="o">+</span> <span class="n">labelNum</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t\t</span><span class="s2"> &quot;</span> <span class="o">+</span> <span class="n">labelX</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">myCount</span><span class="p">,</span> <span class="n">mySOIPositionsIndices</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">mySOI</span><span class="p">,</span> <span class="s2">&quot;indices&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOIPositions as indices: </span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">mySOIPositionsIndices</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14969,30 +14974,17 @@ Reverse Complement: 	 <span class="ansi-blue-fg">G</span><span class="ansi-green
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>mySequence : 	 	CT<span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>ACTCTAGCTGATCCACCCGCCTA<span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>CAGCACACATA<span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCT<span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>CTAAGCTC
-mySOIPositions: 	00<span class="ansi-green-fg">1</span><span class="ansi-green-fg">2</span><span class="ansi-green-fg">1</span>00000000000000000000000<span class="ansi-green-fg">1</span><span class="ansi-green-fg">2</span><span class="ansi-green-fg">1</span>00000000000<span class="ansi-green-fg">1</span><span class="ansi-green-fg">1</span>0000000000000000000000000000000000000000000000<span class="ansi-green-fg">1</span><span class="ansi-green-fg">1</span>00000000
+<pre>mySequence: 	 	 	 CT<span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>ACTCTAGCTGATCCACCCGCCTA<span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>CAGCACACATA<span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCT<span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>CTAAGCTC
+mySOIPositions: 	 	 00<span class="ansi-green-fg">1</span><span class="ansi-green-fg">2</span><span class="ansi-green-fg">1</span>00000000000000000000000<span class="ansi-green-fg">1</span><span class="ansi-green-fg">2</span><span class="ansi-green-fg">1</span>00000000000<span class="ansi-green-fg">1</span><span class="ansi-green-fg">1</span>0000000000000000000000000000000000000000000000<span class="ansi-green-fg">1</span><span class="ansi-green-fg">1</span>00000000
+				 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+				 ---------|---------|---------|---------|---------|---------|---------|---------|---------|---------x
+mySOIPositions as indices: 	 [2, 3, 28, 29, 42, 90]
 </pre>
 </div>
 </div>
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
@@ -15029,43 +15021,59 @@ mySOIPositions: 	00<span class="ansi-green-fg">1</span><span class="ansi-green-f
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># include packages</span>
 <span class="kn">from</span> <span class="nn">ExternalPackages.TerminalColors</span> <span class="kn">import</span> <span class="n">TerminalColors</span>
 <span class="kn">import</span> <span class="nn">Part01.A_Groundwork</span> <span class="k">as</span> <span class="nn">Groundwork</span>
 
-<span class="n">myNumberOfSOIs</span>       <span class="o">=</span> <span class="mi">3</span>
-<span class="n">mySOI</span>                <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">myNumberOfSOIs</span>
-<span class="n">myCount</span>              <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">*</span> <span class="n">myNumberOfSOIs</span>
-<span class="n">mySOIPositions</span>       <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">*</span> <span class="n">myNumberOfSOIs</span>
-<span class="n">myColors</span>             <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">myNumberOfSOIs</span>
-<span class="n">mySequenceColored</span>    <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">myNumberOfSOIs</span>
-<span class="n">myColors</span>             <span class="o">=</span> <span class="p">[</span><span class="n">TerminalColors</span><span class="o">.</span><span class="n">Green</span><span class="p">,</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Blue</span><span class="p">,</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Yellow</span><span class="p">]</span>
-<span class="n">myDefaultColor</span>       <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Default</span>
-<span class="n">myColorWarning</span>       <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Red</span>
+<span class="n">dictTargetSequence</span>                  <span class="o">=</span> <span class="p">{}</span>
+<span class="n">dictSOIs</span>                            <span class="o">=</span> <span class="p">{}</span>
+<span class="n">mySequenceInput</span>                     <span class="o">=</span> <span class="s2">&quot;ctgggactctagctgatccacccgcctagggcagcacacataggacgtagctgcgccaaaaagacgaacccaccatgcccagacgcatctggctaagctc&quot;</span>
+<span class="n">dictTargetSequence</span><span class="p">[</span><span class="s2">&quot;mySequence&quot;</span><span class="p">]</span>    <span class="o">=</span> <span class="n">mySequenceInput</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">dictSOIs</span><span class="p">[</span><span class="s2">&quot;mySOI01&quot;</span><span class="p">]</span>                 <span class="o">=</span> <span class="s2">&quot;AGG&quot;</span>
+<span class="n">dictSOIs</span><span class="p">[</span><span class="s2">&quot;mySOI02&quot;</span><span class="p">]</span>                 <span class="o">=</span> <span class="s2">&quot;GAC&quot;</span>
+<span class="n">dictSOIs</span><span class="p">[</span><span class="s2">&quot;mySOI03&quot;</span><span class="p">]</span>                 <span class="o">=</span> <span class="s2">&quot;CTAG&quot;</span>
 
-<span class="n">mySequenceInput</span>      <span class="o">=</span> <span class="s2">&quot;ctgggactctagctgatccacccgcctagggcagcacacataggacgtagctgcgccaaaaagacgaacccaccatgcccagacgcatctggctaagctc&quot;</span>
-<span class="n">mySequence</span>           <span class="o">=</span> <span class="n">mySequenceInput</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<span class="n">mySOI</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>             <span class="o">=</span> <span class="s2">&quot;AGG&quot;</span>
-<span class="n">mySOI</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>             <span class="o">=</span> <span class="s2">&quot;GAC&quot;</span>
-<span class="n">mySOI</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>             <span class="o">=</span> <span class="s2">&quot;CTAG&quot;</span>
+<span class="n">SOICount</span>                            <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">)</span>
+<span class="n">SOIPositions</span>                        <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">)</span>
+<span class="n">SOIPositionsIndices</span>                 <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mySequenceColored</span>                   <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">)</span>
+<span class="n">myColors</span>                            <span class="o">=</span> <span class="p">[</span><span class="n">TerminalColors</span><span class="o">.</span><span class="n">Green</span><span class="p">,</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Blue</span><span class="p">,</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Yellow</span><span class="p">]</span>
+<span class="n">myDefaultColor</span>                      <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Default</span>
+<span class="n">myColorWarning</span>                      <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Red</span>
 
-<span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">myNumberOfSOIs</span><span class="p">):</span>
-    <span class="n">myCount</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">mySOIPositions</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">mySOI</span><span class="p">[</span><span class="n">ii</span><span class="p">])</span>
-    <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>           <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeq</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">mySOIPositions</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">myColors</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">myDefaultColor</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOI &quot;</span><span class="p">,</span> <span class="n">ii</span><span class="p">,</span> <span class="s2">&quot;: </span><span class="se">\t</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">dictSOIPositions</span>                    <span class="o">=</span> <span class="p">{}</span>
+<span class="n">dictSOIPositionsIndices</span>             <span class="o">=</span> <span class="p">{}</span>
 
-<span class="n">mySequenceColored</span><span class="p">,</span> <span class="n">mySOIPositionsTotalColored</span><span class="p">,</span> <span class="n">mySOIPositionsTotal</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeqMerge</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span>
-                                                                                          <span class="n">mySOIPositions</span><span class="p">,</span>
-                                                                                          <span class="n">myColors</span><span class="p">,</span>
-                                                                                          <span class="n">myDefaultColor</span><span class="p">,</span>
-                                                                                          <span class="n">myColorWarning</span><span class="p">)</span>
+
+
+<span class="n">labelNum</span><span class="p">,</span> <span class="n">labelX</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SeqNumberGen</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="s2">&quot;mySequence&quot;</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="n">labelNum</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="n">labelX</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">):</span>
+    <span class="n">SOICount</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>        <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="s2">&quot;mySequence&quot;</span><span class="p">],</span> <span class="n">dictSOIs</span><span class="p">[</span><span class="n">value</span><span class="p">],</span> <span class="s2">&quot;countchain&quot;</span><span class="p">)</span>
+    <span class="n">SOICount</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">dictSOIPositionsIndices</span><span class="p">[</span><span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="s2">&quot;mySequence&quot;</span><span class="p">],</span> <span class="n">dictSOIs</span><span class="p">[</span><span class="n">value</span><span class="p">],</span> <span class="s2">&quot;indices&quot;</span><span class="p">)</span>
+    <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>                        <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeq</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="s2">&quot;mySequence&quot;</span><span class="p">],</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">],</span> <span class="n">myColors</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">myDefaultColor</span><span class="p">)</span>
+    <span class="n">SOIPositions</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>                             <span class="o">=</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">value</span> <span class="o">+</span> <span class="s2">&quot;: </span><span class="se">\t</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># print(dictSOIPositions)</span>
+<span class="n">mySequenceColored</span><span class="p">,</span> <span class="n">mySOIPositionsTotalColored</span><span class="p">,</span> <span class="n">mySOIPositionsTotal</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeqMerge</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="s2">&quot;mySequence&quot;</span><span class="p">],</span>
+                                                                                                 <span class="n">SOIPositions</span><span class="p">,</span>
+                                                                                                 <span class="n">myColors</span><span class="p">,</span>
+                                                                                                 <span class="n">myDefaultColor</span><span class="p">,</span>
+                                                                                                 <span class="n">myColorWarning</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">126</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOIs (total): </span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">mySequenceColored</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOIPositions (total) : &quot;</span><span class="p">,</span> <span class="n">mySOIPositionsTotalColored</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOIPositions (total):  &quot;</span><span class="p">,</span> <span class="n">mySOIPositionsTotalColored</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">126</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOI01 Indices:</span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">dictSOIPositionsIndices</span><span class="p">[</span><span class="s2">&quot;mySOI01&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOI02 Indices:</span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span><span class="n">dictSOIPositionsIndices</span><span class="p">[</span><span class="s2">&quot;mySOI02&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mySOI03 Indices:</span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span><span class="n">dictSOIPositionsIndices</span><span class="p">[</span><span class="s2">&quot;mySOI03&quot;</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -15085,13 +15093,612 @@ mySOIPositions: 	00<span class="ansi-green-fg">1</span><span class="ansi-green-f
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>mySOI  0 : 	 	  CTGGGACTCTAGCTGATCCACCCGCCT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>GCAGCACACAT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
-mySOI  1 : 	 	  CTGG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>TCTAGCTGATCCACCCGCCTAGGGCAGCACACATAG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GTAGCTGCGCCAAAAA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GAACCCACCATGCCCA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GCATCTGGCTAAGCTC
-mySOI  2 : 	 	  CTGGGACT<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>CTGATCCACCCGC<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>GGCAGCACACATAGGACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
+<pre>			  1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+			  ---------|---------|---------|---------|---------|---------|---------|---------|---------|---------x
+mySOI01: 	 	  CTGGGACTCTAGCTGATCCACCCGCCT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>GCAGCACACAT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
+mySOI02: 	 	  CTGG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>TCTAGCTGATCCACCCGCCTAGGGCAGCACACATAG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GTAGCTGCGCCAAAAA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GAACCCACCATGCCCA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GCATCTGGCTAAGCTC
+mySOI03: 	 	  CTGGGACT<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>CTGATCCACCCGC<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>GGCAGCACACATAGGACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
 ------------------------------------------------------------------------------------------------------------------------------
 mySOIs (total): 	  CTGG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>T<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>CTGATCCACCCGC<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-red-fg">A</span><span class="ansi-red-fg">G</span><span class="ansi-green-fg">G</span>GCAGCACACAT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-red-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GTAGCTGCGCCAAAAA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GAACCCACCATGCCCA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GCATCTGGCTAAGCTC
-mySOIPositions (total) :  0000<span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0<span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span>0000000000000<span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-red-fg">2</span><span class="ansi-red-fg">2</span><span class="ansi-green-fg">1</span>00000000000<span class="ansi-green-fg">1</span><span class="ansi-green-fg">1</span><span class="ansi-red-fg">2</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0000000000000000<span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0000000000000000<span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0000000000000000
+mySOIPositions (total):   0000<span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0<span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span>0000000000000<span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-red-fg">2</span><span class="ansi-red-fg">2</span><span class="ansi-green-fg">1</span>00000000000<span class="ansi-green-fg">1</span><span class="ansi-green-fg">1</span><span class="ansi-red-fg">2</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0000000000000000<span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0000000000000000<span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0000000000000000
+------------------------------------------------------------------------------------------------------------------------------
+mySOI01 Indices:	  [27, 41]
+mySOI02 Indices:	  [4, 43, 62, 81]
+mySOI03 Indices:	  [8, 25]
 </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.4-Data-Grouping-and-Storage">1.4 <a name="DataStorage">Data Grouping and Storage</a><a class="anchor-link" href="#1.4-Data-Grouping-and-Storage">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="1.4.1-Collection-/-Namedtuples">1.4.1 <a name="CollectionNamedtuples">Collection / Namedtuples</a><a class="anchor-link" href="#1.4.1-Collection-/-Namedtuples">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For further sequence analysis it might be useful to establish data containers in order to group different variables and parameter that belong together. One possibility in Python is to set up a collection (namedtuples). Please keep in mind, that long target sequences should be excluded and stored externally and then should be assigned by a nametag identifyer.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
+<span class="c1"># https://stackoverflow.com/questions/9713352/python-creating-a-list-with-a-unique-automatically-generated-name</span>
+<span class="c1"># https://www.pythonpool.com/python-string-to-variable-name/</span>
+<span class="c1"># https://www.pythonforbeginners.com/basics/convert-string-to-variable-name-in-python</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<span class="kn">from</span> <span class="nn">ExternalPackages.TerminalColors</span> <span class="kn">import</span> <span class="n">TerminalColors</span>
+<span class="kn">import</span> <span class="nn">Part01.A_Groundwork</span> <span class="k">as</span> <span class="nn">Groundwork</span>
+
+<span class="n">dictTargetSequence</span>                  <span class="o">=</span> <span class="p">{}</span>
+<span class="n">dictSOIs</span>                            <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">mySOI</span>                               <span class="o">=</span> <span class="p">[]</span>
+<span class="n">dictTargetSequence</span><span class="p">[</span><span class="s2">&quot;mySequence01&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;ctgggactctagctgatccacccgcctagggcagcacacatagg&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">dictTargetSequence</span><span class="p">[</span><span class="s2">&quot;mySequence02&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;acgtagctgcgccaaaaagacgaacccaccatgcccagacgcatctggctaagctc&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">dictSOIs</span><span class="p">[</span><span class="s2">&quot;mySOI01&quot;</span><span class="p">]</span>                 <span class="o">=</span> <span class="s2">&quot;AGG&quot;</span>
+<span class="n">dictSOIs</span><span class="p">[</span><span class="s2">&quot;mySOI02&quot;</span><span class="p">]</span>                 <span class="o">=</span> <span class="s2">&quot;GAC&quot;</span>
+<span class="n">dictSOIs</span><span class="p">[</span><span class="s2">&quot;mySOI03&quot;</span><span class="p">]</span>                 <span class="o">=</span> <span class="s2">&quot;CTAG&quot;</span>
+<span class="n">SOICount</span>                            <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">)</span>
+<span class="n">SOIPositions</span>                        <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">)</span>
+
+<span class="n">dictIndices</span>                         <span class="o">=</span> <span class="p">{}</span>
+<span class="n">mySequenceColored</span>                   <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">)</span>
+
+<span class="n">myColors</span>                            <span class="o">=</span> <span class="p">[</span><span class="n">TerminalColors</span><span class="o">.</span><span class="n">Green</span><span class="p">,</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Blue</span><span class="p">,</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Yellow</span><span class="p">]</span>
+<span class="n">myColorsStr</span>                         <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span> <span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span> <span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="s2">&quot;Yellow&quot;</span><span class="p">]</span> <span class="c1"># Terminal Colors are tricky to store. Using identifiers instead</span>
+<span class="n">myDefaultColor</span>                      <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Default</span>
+<span class="n">myColorWarning</span>                      <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Red</span>
+
+<span class="n">mySOIsAndIndices</span>                    <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;myDataCollection&quot;</span><span class="p">,</span><span class="s2">&quot;mySequenceKey mySequenceValue mySOIKey mySOIValue myColors myIndices&quot;</span><span class="p">)</span>
+<span class="n">mySOIsAndIndices_array</span>              <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mySeqPos</span>                            <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">dictSOIPositions</span>                    <span class="o">=</span> <span class="p">{}</span>
+<span class="n">dictSOIPositionsIndices</span>             <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">mySeqsKey</span> <span class="ow">in</span> <span class="n">dictTargetSequence</span><span class="p">:</span>
+    <span class="n">kk</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">myCurrentKey</span> <span class="ow">in</span> <span class="n">dictSOIs</span><span class="p">:</span>
+        <span class="n">mySOIsAndIndices_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mySOIsAndIndices</span><span class="p">(</span><span class="n">mySeqsKey</span><span class="p">,</span> <span class="n">dictTargetSequence</span><span class="p">[</span><span class="n">mySeqsKey</span><span class="p">],</span> <span class="n">myCurrentKey</span><span class="p">,</span> <span class="n">dictSOIs</span><span class="p">[</span><span class="n">myCurrentKey</span><span class="p">],</span> <span class="n">myColorsStr</span><span class="p">[</span><span class="n">kk</span><span class="p">],</span> <span class="p">[]))</span>
+        <span class="n">kk</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">countTargetSeq</span><span class="p">,</span> <span class="n">valueTargetSeq</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">valueTargetSeq</span><span class="p">)</span>
+    <span class="n">labelNum</span><span class="p">,</span> <span class="n">labelX</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SeqNumberGen</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="n">valueTargetSeq</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="n">labelNum</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="n">labelX</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">):</span>
+        <span class="n">SOICount</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>        <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="n">valueTargetSeq</span><span class="p">],</span> <span class="n">dictSOIs</span><span class="p">[</span><span class="n">value</span><span class="p">],</span> <span class="s2">&quot;countchain&quot;</span><span class="p">)</span>
+        <span class="n">SOICount</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">dictSOIPositionsIndices</span><span class="p">[</span><span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="n">valueTargetSeq</span><span class="p">],</span> <span class="n">dictSOIs</span><span class="p">[</span><span class="n">value</span><span class="p">],</span> <span class="s2">&quot;indices&quot;</span><span class="p">)</span>
+        <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>                        <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeq</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="p">[</span><span class="n">valueTargetSeq</span><span class="p">],</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">],</span> <span class="n">myColors</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">myDefaultColor</span><span class="p">)</span>
+        <span class="n">SOIPositions</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>                             <span class="o">=</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">value</span> <span class="o">+</span> <span class="s2">&quot;: </span><span class="se">\t</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">SOIs</span> <span class="ow">in</span> <span class="n">mySOIsAndIndices_array</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SOIs</span><span class="o">.</span><span class="n">mySequenceValue</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">SOIs</span><span class="o">.</span><span class="n">mySOIValue</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">SOIs</span><span class="o">.</span><span class="n">mySequenceValue</span><span class="p">[</span><span class="n">ii</span><span class="p">:</span><span class="n">ii</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">SOIs</span><span class="o">.</span><span class="n">mySOIValue</span><span class="p">)]</span> <span class="o">==</span> <span class="n">SOIs</span><span class="o">.</span><span class="n">mySOIValue</span><span class="p">:</span>
+            <span class="n">SOIs</span><span class="o">.</span><span class="n">myIndices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">SOIs</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>mySequence01
+			  12345678901234567890123456789012345678901234
+			  ---------|---------|---------|---------|----
+mySOI01: 	 	  CTGGGACTCTAGCTGATCCACCCGCCT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>GCAGCACACAT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>
+mySOI02: 	 	  CTGG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>TCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG
+mySOI03: 	 	  CTGGGACT<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>CTGATCCACCCGC<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>GGCAGCACACATAGG
+
+
+mySequence02
+			  12345678901234567890123456789012345678901234567890123456
+			  ---------|---------|---------|---------|---------|------
+mySOI01: 	 	  ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
+mySOI02: 	 	  ACGTAGCTGCGCCAAAAA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GAACCCACCATGCCCA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GCATCTGGCTAAGCTC
+mySOI03: 	 	  ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
+
+
+myDataCollection(mySequenceKey=&#39;mySequence01&#39;, mySequenceValue=&#39;CTGGGACTCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG&#39;, mySOIKey=&#39;mySOI01&#39;, mySOIValue=&#39;AGG&#39;, myColors=&#39;Green&#39;, myIndices=[27])
+myDataCollection(mySequenceKey=&#39;mySequence01&#39;, mySequenceValue=&#39;CTGGGACTCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG&#39;, mySOIKey=&#39;mySOI02&#39;, mySOIValue=&#39;GAC&#39;, myColors=&#39;Blue&#39;, myIndices=[4])
+myDataCollection(mySequenceKey=&#39;mySequence01&#39;, mySequenceValue=&#39;CTGGGACTCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG&#39;, mySOIKey=&#39;mySOI03&#39;, mySOIValue=&#39;CTAG&#39;, myColors=&#39;Yellow&#39;, myIndices=[8, 25])
+myDataCollection(mySequenceKey=&#39;mySequence02&#39;, mySequenceValue=&#39;ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC&#39;, mySOIKey=&#39;mySOI01&#39;, mySOIValue=&#39;AGG&#39;, myColors=&#39;Green&#39;, myIndices=[])
+myDataCollection(mySequenceKey=&#39;mySequence02&#39;, mySequenceValue=&#39;ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC&#39;, mySOIKey=&#39;mySOI02&#39;, mySOIValue=&#39;GAC&#39;, myColors=&#39;Blue&#39;, myIndices=[18, 37])
+myDataCollection(mySequenceKey=&#39;mySequence02&#39;, mySequenceValue=&#39;ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC&#39;, mySOIKey=&#39;mySOI03&#39;, mySOIValue=&#39;CTAG&#39;, myColors=&#39;Yellow&#39;, myIndices=[])
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The accessibility of the namedtuple-fields can be a little tricky though. Here are two possibilities to do that:</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#            TargetSeq       SOI        Item2Look4</span>
+<span class="n">SEARCH_ITEM</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mySequence02&quot;</span><span class="p">,</span> <span class="s2">&quot;mySOI02&quot;</span><span class="p">,</span> <span class="s2">&quot;myColors&quot;</span><span class="p">]</span>
+
+<span class="n">INDEX_ARRAY</span><span class="o">=</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dictTargetSequence</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">SEARCH_ITEM</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">dictSOIs</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dictSOIs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">SEARCH_ITEM</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are asking for the value of </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">SEARCH_ITEM</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> for the sequence of interest </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">SEARCH_ITEM</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2"> within the target sequence </span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">SEARCH_ITEM</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">124</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">mySOIsAndIndices_array</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="n">INDEX_ARRAY</span><span class="p">)</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="n">mySOIsAndIndices</span><span class="o">.</span><span class="n">_fields</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">SEARCH_ITEM</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value is as follows: </span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>You are asking for the value of &#34;myColors&#34; for the sequence of interest &#34;mySOI02&#34; within the target sequence &#34;mySequence02&#34;.
+----------------------------------------------------------------------------------------------------------------------------
+The value is as follows: 	  Blue
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">search_item</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mySOIKey&quot;</span><span class="p">,</span> <span class="s2">&quot;mySOI02&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All items fulfilling the requirements:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">197</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">SOIs</span> <span class="ow">in</span> <span class="n">mySOIsAndIndices_array</span><span class="p">:</span>
+    <span class="n">test_data</span> <span class="o">=</span> <span class="n">SOIs</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="n">mySOIsAndIndices</span><span class="o">.</span><span class="n">_fields</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">search_item</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="k">if</span> <span class="n">test_data</span> <span class="o">==</span> <span class="n">search_item</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">SOIs</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="n">mySOIsAndIndices</span><span class="o">.</span><span class="n">_fields</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">search_item</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">SOIs</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>All items fulfilling the requirements:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+myDataCollection(mySequenceKey=&#39;mySequence01&#39;, mySequenceValue=&#39;CTGGGACTCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG&#39;, mySOIKey=&#39;mySOI02&#39;, mySOIValue=&#39;GAC&#39;, myColors=&#39;Blue&#39;, myIndices=[4])
+myDataCollection(mySequenceKey=&#39;mySequence02&#39;, mySequenceValue=&#39;ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC&#39;, mySOIKey=&#39;mySOI02&#39;, mySOIValue=&#39;GAC&#39;, myColors=&#39;Blue&#39;, myIndices=[18, 37])
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="1.4.2-Store-in-JSON-Format">1.4.2 <a name="JSONDictionary">Store in JSON-Format</a><a class="anchor-link" href="#1.4.2-Store-in-JSON-Format">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Probably more convient, common and thus advisory is to use a dictionary / JSON-format combination.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Step 1: Dicitonary Setup and Test-Readout</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
+<span class="c1"># https://python.plainenglish.io/how-to-read-and-write-to-json-file-in-python-ef35460aaeb5</span>
+
+<span class="c1"># Dicitonary Setup</span>
+
+<span class="n">dictSeqGroup</span> <span class="o">=</span>  <span class="p">{</span>
+                <span class="s2">&quot;SOIs&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;mySOI01&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;Seq&quot;</span><span class="p">:</span> <span class="s2">&quot;AGG&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;myColor&quot;</span><span class="p">:</span> <span class="s2">&quot;Green&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="s2">&quot;mySOI02&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;Seq&quot;</span><span class="p">:</span> <span class="s2">&quot;GAC&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;myColor&quot;</span><span class="p">:</span> <span class="s2">&quot;Blue&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                        <span class="s2">&quot;mySOI03&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;Seq&quot;</span><span class="p">:</span> <span class="s2">&quot;CTAG&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;myColor&quot;</span><span class="p">:</span> <span class="s2">&quot;Yellow&quot;</span><span class="p">,</span>
+                        <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;targetSeq&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;mySequence01&quot;</span><span class="p">:</span> <span class="s2">&quot;CTGGGACTCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;mySequence02&quot;</span><span class="p">:</span> <span class="s2">&quot;ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC&quot;</span>
+                <span class="p">}</span>
+                <span class="p">}</span>
+
+<span class="c1"># Test-Readout</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;targetSeq&quot;</span><span class="p">][</span><span class="s2">&quot;mySequence02&quot;</span><span class="p">])</span>     <span class="c1"># &lt;-- 1. query</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;SOIs&quot;</span><span class="p">][</span><span class="s2">&quot;mySOI03&quot;</span><span class="p">][</span><span class="s2">&quot;myColor&quot;</span><span class="p">])</span>    <span class="c1"># &lt;-- 2. query</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
+Yellow
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Step 2: Data Export into JSON-Format</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
+<span class="c1"># https://pynative.com/python-prettyprint-json-data/</span>
+<span class="c1"># https://stackoverflow.com/questions/73800772/returning-jsondecodeerror-expecting-value</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Part01Data/01_04_02_DictSeqGroup.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">,</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Step 3: Run Operations on Data and Save Modifications. Here: We determine and add the SOIPositions-Indices to each tarSeq-mySOI-pair, include the data in the master-dictionary and save everything in JSON-format.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myColors</span>                            <span class="o">=</span> <span class="p">[</span><span class="n">TerminalColors</span><span class="o">.</span><span class="n">Green</span><span class="p">,</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Blue</span><span class="p">,</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Yellow</span><span class="p">]</span>
+<span class="n">myDefaultColor</span>                      <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Default</span>
+<span class="n">myColorWarning</span>                      <span class="o">=</span> <span class="n">TerminalColors</span><span class="o">.</span><span class="n">Red</span>
+
+<span class="c1"># Open JSON file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./Part01Data/01_04_02_DictSeqGroup.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">openfile</span><span class="p">:</span>
+    <span class="c1"># Reading from json file</span>
+    <span class="n">dictSeqGroup</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">openfile</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">countTargetSeq</span><span class="p">,</span> <span class="n">valueTargetSeq</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;targetSeq&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+    
+    <span class="n">labelNum</span><span class="p">,</span> <span class="n">labelX</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SeqNumberGen</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;targetSeq&quot;</span><span class="p">][</span><span class="n">valueTargetSeq</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="n">labelNum</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="n">labelX</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;SOIs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="n">SOICount</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>        <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;targetSeq&quot;</span><span class="p">][</span><span class="n">valueTargetSeq</span><span class="p">],</span> <span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;SOIs&quot;</span><span class="p">][</span><span class="n">value</span><span class="p">][</span><span class="s2">&quot;Seq&quot;</span><span class="p">],</span> <span class="s2">&quot;countchain&quot;</span><span class="p">)</span>
+        <span class="n">SOICount</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">dictSOIPositionsIndices</span><span class="p">[</span><span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;targetSeq&quot;</span><span class="p">][</span><span class="n">valueTargetSeq</span><span class="p">],</span> <span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;SOIs&quot;</span><span class="p">][</span><span class="n">value</span><span class="p">][</span><span class="s2">&quot;Seq&quot;</span><span class="p">],</span> <span class="s2">&quot;indices&quot;</span><span class="p">)</span>
+        <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>                        <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeq</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;targetSeq&quot;</span><span class="p">][</span><span class="n">valueTargetSeq</span><span class="p">],</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">],</span> <span class="n">myColors</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">myDefaultColor</span><span class="p">)</span>
+        <span class="n">SOIPositions</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>                             <span class="o">=</span> <span class="n">dictSOIPositions</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">value</span> <span class="o">+</span> <span class="s2">&quot;: </span><span class="se">\t</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">count</span><span class="p">],</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;myIndices&quot;</span> <span class="ow">in</span> <span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;SOIs&quot;</span><span class="p">][</span><span class="n">value</span><span class="p">]:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;SOIs&quot;</span><span class="p">][</span><span class="n">value</span><span class="p">][</span><span class="s2">&quot;myIndices&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;SOIs&quot;</span><span class="p">][</span><span class="n">value</span><span class="p">][</span><span class="s2">&quot;myIndices&quot;</span><span class="p">][</span><span class="n">valueTargetSeq</span><span class="p">]</span> <span class="o">=</span> <span class="n">dictSOIPositionsIndices</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">[</span><span class="s2">&quot;SOIs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t\t</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">dictSOIPositionsIndices</span><span class="p">[</span><span class="n">value</span><span class="p">],</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./Part01Data/01_04_02_DictSeqGroup.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dictSeqGroup</span><span class="p">,</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>			  12345678901234567890123456789012345678901234
+			  ---------|---------|---------|---------|----
+mySOI01: 	 	  CTGGGACTCTAGCTGATCCACCCGCCT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>GCAGCACACAT<span class="ansi-green-fg">A</span><span class="ansi-green-fg">G</span><span class="ansi-green-fg">G</span>
+mySOI02: 	 	  CTGG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>TCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG
+mySOI03: 	 	  CTGGGACT<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>CTGATCCACCCGC<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>GGCAGCACACATAGG
+			  [27, 41]
+			  [4]
+			  [8, 25]
+
+
+			  12345678901234567890123456789012345678901234567890123456
+			  ---------|---------|---------|---------|---------|------
+mySOI01: 	 	  ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
+mySOI02: 	 	  ACGTAGCTGCGCCAAAAA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GAACCCACCATGCCCA<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>GCATCTGGCTAAGCTC
+mySOI03: 	 	  ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC
+			  []
+			  [18, 37]
+			  []
+
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Step 4: Reload JSON-file and print the content. Note, that the indices to each targetSeq-mySOI-pair is now added.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
+<span class="c1"># https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/</span>
+
+<span class="c1"># Using readlines()</span>
+<span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./Part01Data/01_04_02_DictSeqGroup.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">Lines</span> <span class="o">=</span> <span class="n">file1</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+ 
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Strips the newline character</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">Lines</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>{
+    &#34;SOIs&#34;: {
+        &#34;mySOI01&#34;: {
+            &#34;Seq&#34;: &#34;AGG&#34;,
+            &#34;myColor&#34;: &#34;Green&#34;,
+            &#34;myIndices&#34;: {
+                &#34;mySequence01&#34;: [
+                    27,
+                    41
+                ],
+                &#34;mySequence02&#34;: []
+            }
+        },
+        &#34;mySOI02&#34;: {
+            &#34;Seq&#34;: &#34;GAC&#34;,
+            &#34;myColor&#34;: &#34;Blue&#34;,
+            &#34;myIndices&#34;: {
+                &#34;mySequence01&#34;: [
+                    4
+                ],
+                &#34;mySequence02&#34;: [
+                    18,
+                    37
+                ]
+            }
+        },
+        &#34;mySOI03&#34;: {
+            &#34;Seq&#34;: &#34;CTAG&#34;,
+            &#34;myColor&#34;: &#34;Yellow&#34;,
+            &#34;myIndices&#34;: {
+                &#34;mySequence01&#34;: [
+                    8,
+                    25
+                ],
+                &#34;mySequence02&#34;: []
+            }
+        }
+    },
+    &#34;targetSeq&#34;: {
+        &#34;mySequence01&#34;: &#34;CTGGGACTCTAGCTGATCCACCCGCCTAGGGCAGCACACATAGG&#34;,
+        &#34;mySequence02&#34;: &#34;ACGTAGCTGCGCCAAAAAGACGAACCCACCATGCCCAGACGCATCTGGCTAAGCTC&#34;
+    }
+}</pre>
 </div>
 </div>
 
@@ -15134,7 +15741,7 @@ mySOIPositions (total) :  0000<span class="ansi-blue-fg">1</span><span class="an
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
@@ -15202,7 +15809,7 @@ mySOIPositions (total) :  0000<span class="ansi-blue-fg">1</span><span class="an
     <span class="o">%</span><span class="k">run</span> &quot;./Part01Data/02_Sequence.py&quot;
     <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">myNumberOfSOIs</span><span class="p">):</span>
         <span class="n">myCurrentKey</span>    <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dictSequence</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="n">ii</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-        <span class="n">myCount</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">mySOIPositions</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">dictSequence</span><span class="p">[</span><span class="s2">&quot;mySequence&quot;</span><span class="p">],</span> <span class="n">dictSequence</span><span class="p">[</span><span class="n">myCurrentKey</span><span class="p">])</span>
+        <span class="n">myCount</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">mySOIPositions</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">dictSequence</span><span class="p">[</span><span class="s2">&quot;mySequence&quot;</span><span class="p">],</span> <span class="n">dictSequence</span><span class="p">[</span><span class="n">myCurrentKey</span><span class="p">],</span> <span class="s2">&quot;countchain&quot;</span><span class="p">)</span>
     <span class="n">myText</span><span class="o">.</span><span class="n">delete</span>
     <span class="n">myTextnew</span><span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="n">tab1</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">35</span><span class="p">,</span> <span class="n">background</span> <span class="o">=</span> <span class="n">myBackgroundColor</span><span class="p">,</span> <span class="n">highlightthickness</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                     <span class="n">borderwidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">font</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Courier New&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;bold&#39;</span><span class="p">))</span>
@@ -15309,7 +15916,7 @@ mySOIPositions (total) :  0000<span class="ansi-blue-fg">1</span><span class="an
 <span class="n">columnCount</span>  <span class="o">+=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">myNumberOfSOIs</span><span class="p">):</span>
     <span class="n">currentKey</span>                    <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dictSequence</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="n">ii</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">myCount</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">mySOIPositions</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">dictSequence</span><span class="p">[</span><span class="n">currentKey</span><span class="p">])</span>
+    <span class="n">myCount</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">mySOIPositions</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">SOIPositions</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">dictSequence</span><span class="p">[</span><span class="n">currentKey</span><span class="p">],</span> <span class="s2">&quot;countchain&quot;</span><span class="p">)</span>
     <span class="n">mySequenceColored</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>           <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeq</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">mySOIPositions</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">myColors</span><span class="p">[</span><span class="n">ii</span><span class="p">],</span> <span class="n">myDefaultColor</span><span class="p">)</span>
 
 <span class="n">mySequenceColored</span><span class="p">,</span> <span class="n">mySOIPositionsTotalColored</span><span class="p">,</span> <span class="n">mySOIPositionsTotal</span> <span class="o">=</span> <span class="n">Groundwork</span><span class="o">.</span><span class="n">ColorTheSeqMerge</span><span class="p">(</span><span class="n">mySequence</span><span class="p">,</span> <span class="n">mySOIPositions</span><span class="p">,</span> <span class="n">myColors</span><span class="p">,</span>
@@ -15403,7 +16010,6 @@ mySOIPositions (total) :  0000<span class="ansi-blue-fg">1</span><span class="an
 <span class="n">tabsystem</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tab2</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Next Idea&#39;</span><span class="p">)</span>
 <span class="n">tabsystem</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 
-
 <span class="n">display</span><span class="p">(</span><span class="n">ImageIPython</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;./figures/TabbedGUI.png&#39;</span><span class="p">))</span>
 <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
 </pre></div>
@@ -15425,8 +16031,8 @@ mySOIPositions (total) :  0000<span class="ansi-blue-fg">1</span><span class="an
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>mySOIs (total): 	 	 CTGG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>T<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>CTGATCCACCCGC<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-red-fg">A</span><span class="ansi-red-fg">G</span><span class="ansi-green-fg">G</span>GCAGCACA
-mySOIPositions (total) : 	 0000<span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0<span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span>0000000000000<span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-red-fg">2</span><span class="ansi-red-fg">2</span><span class="ansi-green-fg">1</span>00000000
+<pre>mySOIs (total): 	 	 CTGG<span class="ansi-blue-fg">G</span><span class="ansi-blue-fg">A</span><span class="ansi-blue-fg">C</span>T<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">G</span>CTGATCCAYXCCGC<span class="ansi-yellow-fg">C</span><span class="ansi-yellow-fg">T</span><span class="ansi-red-fg">A</span><span class="ansi-red-fg">G</span><span class="ansi-green-fg">G</span>GCAGCACA
+mySOIPositions (total) : 	 0000<span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span><span class="ansi-blue-fg">1</span>0<span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span>00000000000000<span class="ansi-yellow-fg">1</span><span class="ansi-yellow-fg">1</span><span class="ansi-red-fg">2</span><span class="ansi-red-fg">2</span><span class="ansi-green-fg">1</span>00000000
 </pre>
 </div>
 </div>
@@ -15457,7 +16063,18 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="3.-k-mer-Analysis-of-a-Sequence">3. <a name="WorkingWithKmers">k-mer-Analysis of a Sequence</a><a class="anchor-link" href="#3.-k-mer-Analysis-of-a-Sequence">&#182;</a></h1>
+<h1 id="3.-Mutations,-Insertions-and-Deletions">3. <a name="WorkingWithKmers">Mutations, Insertions and Deletions</a><a class="anchor-link" href="#3.-Mutations,-Insertions-and-Deletions">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="4.-k-mer-Analysis-of-a-Sequence">4. <a name="WorkingWithKmers">k-mer-Analysis of a Sequence</a><a class="anchor-link" href="#4.-k-mer-Analysis-of-a-Sequence">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15480,10 +16097,18 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol start="100">
-<li><a name="htmlExportOfCode">.html-Export of Code</a></li>
-</ol>
-
+<h1 id="100.-Appendix">100. <a name="Appendix">Appendix</a><a class="anchor-link" href="#100.-Appendix">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-.html-Export-of-Code">1. <a name="htmlExportOfCode">.html-Export of Code</a><a class="anchor-link" href="#1.-.html-Export-of-Code">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15492,7 +16117,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># export code to html</span>
@@ -15513,7 +16138,7 @@ class="
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
