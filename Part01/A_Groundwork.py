@@ -165,13 +165,35 @@ def List2String(myList):
 	return myList
 
 
+def SeqNumberGen(mySequence, distance):
+	labelX = []
+	labelNum = []
+	for ii in range(1,len(mySequence)+1):
+		if (ii % (distance * 10)) == 0:
+			labelX.append("x")
+		elif (ii % distance) == 0:
+			labelX.append("|")
+		else:
+			labelX.append("-")
+		labelNum.append((ii % 10))
+	labelX = List2String(labelX)
+	labelNum = List2String(labelNum)
+	return labelNum, labelX
+
+
 # find SOI positions and return each position as a digit representing, how many SOIs are "involved"
-def SOIPositions(mySequence, mySOI):
+def SOIPositions(mySequence, mySOI, mode):
+	
 	import numpy as np
 	mySOIPositions = np.array([0] * len(mySequence))
+	mySOIPositionsIndices = []
 	myCount = 0
 	for ii in range(0, len(mySequence)-len(mySOI)+1):
 		if mySequence[ii:ii + len(mySOI)] == mySOI:
 			myCount = myCount + 1
 			mySOIPositions[ii:ii + len(mySOI)] = mySOIPositions[ii:ii + len(mySOI)] + 1
-	return myCount, mySOIPositions
+			mySOIPositionsIndices.append(ii)
+	if mode == "countchain":
+		return myCount, mySOIPositions
+	elif mode == "indices":
+		return myCount, mySOIPositionsIndices
