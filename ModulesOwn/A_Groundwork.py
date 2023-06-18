@@ -161,8 +161,8 @@ def DarkTitleBar(window):
 
 # convert a list to a string
 def List2String(myList):
-	myList = ''.join(str(i) for i in myList)
-	return myList
+	myStr = ''.join(str(i) for i in myList)
+	return myStr
 
 
 def SeqNumberGen(mySequence, distance):

@@ -1,0 +1,17 @@
+{
+        "SOIs": {
+            "mySOI01": {
+                "Seq": "AGG",
+                "myColor": "green"
+            },
+            "mySOI02": {
+                "Seq": "GAC",
+                "myColor": "blue"
+            },
+            "mySOI03": {
+                "Seq": "CTAG",
+                "myColor": "yellow"
+            }
+        },
+        "mySequence": "CTGGGACTCTAGCTGATCCACCCGCCTAGGGCAGCACA"
+    }

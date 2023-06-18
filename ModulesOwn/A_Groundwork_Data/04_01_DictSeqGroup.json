@@ -1,0 +1,83 @@
+{
+    "palindrom01": {
+        "myColor": "Green",
+        "mySOI": "AGCGCCG",
+        "mySOIIndices": [
+            0
+        ],
+        "mySOIRC": "CGGCGCU",
+        "mySOIRCIndices": [
+            64
+        ]
+    },
+    "palindrom02": {
+        "myColor": "Green",
+        "mySOI": "GCGCC",
+        "mySOIIndices": [
+            1
+        ],
+        "mySOIRC": "GGCGC",
+        "mySOIRCIndices": [
+            8,
+            65
+        ]
+    },
+    "palindrom03": {
+        "myColor": "Green",
+        "mySOI": "CGCCG",
+        "mySOIIndices": [
+            2
+        ],
+        "mySOIRC": "CGGCG",
+        "mySOIRCIndices": [
+            64
+        ]
+    },
+    "palindrom04": {
+        "myColor": "Green",
+        "mySOI": "AGCGC",
+        "mySOIIndices": [
+            19
+        ],
+        "mySOIRC": "GCGCU",
+        "mySOIRCIndices": [
+            66
+        ]
+    },
+    "palindrom05": {
+        "myColor": "Green",
+        "mySOI": "GCGCG",
+        "mySOIIndices": [
+            20
+        ],
+        "mySOIRC": "CGCGC",
+        "mySOIRCIndices": [
+            21
+        ]
+    },
+    "palindrom06": {
+        "myColor": "Green",
+        "mySOI": "CAGGG",
+        "mySOIIndices": [
+            25
+        ],
+        "mySOIRC": "CCCUG",
+        "mySOIRCIndices": [
+            37
+        ]
+    },
+    "palindrom07": {
+        "myColor": "Green",
+        "mySOI": "CUCGG",
+        "mySOIIndices": [
+            47
+        ],
+        "mySOIRC": "CCGAG",
+        "mySOIRCIndices": [
+            59
+        ]
+    },
+    "targetSeq": {
+        "mySequence": "AGCGCCGUGGCGCAGDGGAAGCGCGCAGGGCUCAUAACCCUGAUGDCCUCGGAUCGAAACCGAGCGGCGCUACCA"
+    }
+}
