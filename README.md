@@ -1,7 +1,7 @@
-# Sequence Analysis
+# Sequence Analysis (in Progress)
 
 # Abstract
-This project aims at the principles of analysing (DNA-) sequence data, which are vastly and freely available on scientific bioinformatics databases (check out my website www.bio-century.net for further info). "Part 1" is a collection of Python-based example codes focussing on sequence analysis on a very basic level. More parts are to come soon...<br>
+This project aims at the principles of analysing (DNA-) sequence data. The underlying data can be obtained freely from many scientific bioinformatics databases (check out my website www.bio-century.net for further info). This "Part 1" is a collection of Python-based example codes focussing on sequence analysis on a very basic level. More parts are to come soon...<br>
 Goals and example code is presented in a Jupyter-Notebook-(.ipynb-)fileformat. Jupyter-NB or equivalent extensions in the IDE of your choice is thus required to modify it.
 <br><br>
 Coding example:<br>
@@ -9,14 +9,17 @@ Coding example:<br>
 
 
 # Table of Content
-- [ Getting Started](#GettingStarted)
-  - [ Inspirations \& ToDo's](#InspirationsAndToDos)
-- [ Folder structure](#FolderStructure)
-- [ Requirements](#Requirements)
-- [ License](#License)
-- [ Contributors \& Acknowledgments](#ContributorsAcknowledgments)
-- [ Sources](#Sources)
-- [ Contact](#Contact)
+- [Sequence Analysis (in Progress)](#sequence-analysis-in-progress)
+- [Abstract](#abstract)
+- [Table of Content](#table-of-content)
+  - [ Getting Started](#-getting-started)
+    - [ Inspirations \& ToDo's](#-inspirations--todos)
+  - [ Folder structure](#-folder-structure)
+  - [ Requirements](#-requirements)
+  - [ License](#-license)
+  - [ Contributors \& Acknowledgments](#-contributors--acknowledgments)
+  - [ Sources](#-sources)
+  - [ Contact](#-contact)
 
 
 ## <a id='GettingStarted'></a> Getting Started
