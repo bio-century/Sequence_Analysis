@@ -36,9 +36,10 @@ Here is room for your inspiration, which is very much appreciated! Please be pat
 
 ## <a id='FolderStructure'></a> Folder structure
 ```
+|   LICENSE
 |   README.md
-|   SequenceAnalysisPart01.html                             html-transformed output of the .ipynb-file for representation purposes
-|   SequenceAnalysisPart01.ipynb                            Main .ipynb-file explaining tasks and giving example code to solve them
+|   SequenceAnalysis.html                                  html-transformed output of the .ipynb-file for representation purposes
+|   SequenceAnalysis.ipynb                                 Main .ipynb-file explaining tasks and giving example code to solve them
 |
 +---ExternalPackages
 |   |   TerminalColors.py                                   External package defining the colors used to print sequences in the Jupyter-Notebook-terminal
@@ -46,13 +47,21 @@ Here is room for your inspiration, which is very much appreciated! Please be pat
 |
 +---Figures +++                                             (COLLAPSED): Example images for clarification
 |
++---Figures_scientific
+|
 +---Icons +++                                               (COLLAPSED): Icons / Logos of bio-century.net
 |
-+---Part01
-|   |   A_Groundwork.py                                     Functions / methods developed for Sequence Analysis Part 01
-|   \---__pycache__                                         (COLLAPSED): Auto-generated pycache
++---ModulesExternal
 |
-+---Part01Data +++                                          (COLLAPSED): Storage for Sequence Data used in jupyter notebook scripts
++---ModulesOwn                                              Functions / methods developed for Sequence Analysis
+|   |   A_Groundwork.py
+|   |   B_SimpleTabbedGUI.py
+|   |   D_KmerAnalysis.py
+|   |
+|   +---A_Groundwork_Data
+|   +---B_SimpleTabbedGUI_Data
+|   +---D_KmerAnalysis
+|   \---__pycache__                                         (COLLAPSED): Auto-generated pycache
 |
 +---requirements
 |   \---requirements.txt                                    (COLLAPSED): Auto-generated pycache
